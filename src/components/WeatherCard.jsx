@@ -21,17 +21,17 @@ export default function WeatherCard({valueCity,valueVisibilty,valueWater,ValueWi
     }
     const imageWeather=imgWeather()
     return(
-        <div className="bg-blue-400 flex flex-col items-center w-full max-w-sm sm:max-w-md lg:max-w-4xl md:max-w-4xl rounded-3xl mt-8 space-y-4 py-6  max-md:mx-4">
-            <div className="flex items-center space-x-3 text-white">
-                <FaMapMarkerAlt className="text-xl"/>
-                <p className="text-2xl font-bold">{valueCity}</p>
+        <div className="bg-blue-400 flex flex-col w-11/12 p-5 items-center space-y-5 rounded-2xl my-5 mx-auto lg:w-2xl">
+            <div className="flex items-center space-x-2 text-white text-lg lg:text-2xl">
+                <FaMapMarkerAlt />
+                <p className="font-bold">{valueCity}</p>
             </div>
             <div className="flex flex-col items-center text-white">
-                <img src={imageWeather} alt="" />
-                <p className="text-5xl">{valueCelcius}&#176;C</p>
-                <p className="text-xl">{valueWeather}</p>
+                <img src={imageWeather} alt=""/>
+                <p className="text-2xl lg:text-3xl">{valueCelcius}&#176;C</p>
+                <p className="text-xl lg:text-2xl">{valueWeather}</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 ">
+            <div className="grid grid-cols-3 gap-3 w-full ">
                 <ItemWeather Icon={<FaEye/>} label="Visibilty" value={valueVisibilty} />
                 <ItemWeather Icon={<IoMdWater/>} label="Humadity" value={valueWater} />
                 <ItemWeather Icon={<FaWind/>} label="Wind" value={ValueWind} />
