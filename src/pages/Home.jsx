@@ -46,14 +46,6 @@ export default function Home(){
         loadData("jakarta");
     }, []);
 
-    const weatherNow=weather?.weather?.[0]?.main?? "-";
-    const celcius=Math.round(weather?.main?.temp)
-    const wind=weather?.wind?.speed != null ? `${(weather.wind.speed *3.6).toFixed(1)} km/h`: null
-    const visibility=weather?.visibility != null ? `${(weather.visibility/1000).toFixed(1)} km`: null
-    const water=weather?.main?.humidity != null ? `${weather.main.humidity}%`: null 
-    const idWeather=weather?.weather?.[0]?.id ?? "-"
-
-
     return(
         <div className="">
             <InputSearch handleChange={onChangeHandler} handleSubmit={onSubmitHandler} value={search}/>
@@ -61,7 +53,7 @@ export default function Home(){
         <WeatherCardSkeleton/>
       )}
       {!loading && (
-            <WeatherCard ValueWind={wind} valueVisibilty={visibility} valueWater={water} valueWeather={weatherNow} valueCelcius={celcius} idWeather={idWeather} valueCity={city.name}/>
+            <WeatherCard weather={weather} valueCity={city.name}/>
       )}
       <HourlyWeatherCard forecast={forecastHours} loading={loading}/>
       <DayWeatherCard forecast={forecastDays} loading={loading}/>

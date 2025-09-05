@@ -1,6 +1,5 @@
 import { Navbar, NavbarBrand} from "flowbite-react";
 import { FaCloudSun } from "react-icons/fa";
-import { useLocation } from "react-router";
 
 export default function NavigasiBar(){
     const link=[
