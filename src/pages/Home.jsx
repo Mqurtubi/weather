@@ -3,6 +3,8 @@ import InputSearch from "../components/InputSearch"
 import WeatherCard from "../components/WeatherCard"
 import DayWeatherCard from "../components/DayWeatherCard"
 import HourlyWeatherCard from "../components/HourlyWeatherCard"
+import ExtraWeatherInfoCard from "../components/ExtraWeatherInfoCard"
+import SunMoonCard from "../components/SunMoonCard"
 import { getWeather,getInfoCity, getForecastWeather, getItemForecastPerHours,getItemForecastPerDays} from "../api/weather"
 import WeatherCardSkeleton from "../components/WeatherCardSkeleton"
 
@@ -26,6 +28,7 @@ export default function Home(){
             setCity(resCity)
             setForecastHours(getItemForecastPerHours(resForecast))
             setForecastDays(getItemForecastPerDays(resForecast))
+            console.log(res)
         } catch (error) {
             console.log(error.message || "Gagal memuat data awal");
         } finally{
@@ -57,6 +60,10 @@ export default function Home(){
       )}
       <HourlyWeatherCard forecast={forecastHours} loading={loading}/>
       <DayWeatherCard forecast={forecastDays} loading={loading}/>
+      <div className="flex flex-col md:flex-row justify-center md:w-11/12 lg:w-8/12 m-auto">
+      <ExtraWeatherInfoCard weather={weather} loading={loading}/>
+      <SunMoonCard weather={weather} loading={loading}/>
+      </div>
       
     </div>
     )

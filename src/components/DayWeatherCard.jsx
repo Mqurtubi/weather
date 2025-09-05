@@ -4,7 +4,7 @@ import ItemForecastDays from "./ItemForecastDays"
 import PropTypes from "prop-types"
 export default function DayWeatherCard({forecast,loading}){
     return(
-        <div className="m-auto w-11/12 lg:w-1/2">
+        <div className="m-auto w-11/12 lg:w-1/2 mb-5">
             <p className="text-xl font-semibold mb-3 text-white  ">5-Day Forecast</p>
             <div className=" bg-blue-400 rounded-xl pt-3 flex flex-col px-2">
                 

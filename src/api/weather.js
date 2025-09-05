@@ -80,9 +80,34 @@ const getHours= (item) =>{
     return `${hh}:${mm}`
 }
 
+const getSunrise= (item) => {
+    const unix=item.sys.sunrise
+    
+    const date=new Date(unix*1000)
+    const hh=String(date.getHours()).padStart(2,"0")
+    const mm=String(date.getMinutes()).padStart(2,"0")
+    return `${hh}:${mm}`
+}
+
+const getSunset= (item) => {
+    const unix=item.sys.sunset
+    
+    const date=new Date(unix*1000)
+    const hh=String(date.getHours()).padStart(2,"0")
+    const mm=String(date.getMinutes()).padStart(2,"0")
+    return `${hh}:${mm}`
+}
+
 const getDays=(item)=>{
     const day= new Date(item)
     return new Intl.DateTimeFormat("en-EN",{weekday:"short"}).format(day)
+}
+
+const getDayLength=(item)=>{
+    const duration = item.sys.sunset - item.sys.sunrise
+    const hh=Math.floor(duration/3600)
+    const mm=Math.floor((duration%3600) / 60)
+    return `${hh}:${String(mm).padStart(2,'0')}`
 }
 
 const getImage=(idWeather)=>{
@@ -99,4 +124,4 @@ const getImage=(idWeather)=>{
         if(idWeather == 803 || idWeather == 804) return "04d.png"
         return undefined
 }
-export {getWeather,getForecastWeather, getInfoCity, getItemForecastPerHours, getHours, getItemForecastPerDays, getDays,getImage}
+export {getWeather,getForecastWeather, getInfoCity, getItemForecastPerHours, getHours, getItemForecastPerDays, getDays,getImage, getSunrise, getSunset, getDayLength}
