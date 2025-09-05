@@ -28,7 +28,6 @@ export default function Home(){
             setCity(resCity)
             setForecastHours(getItemForecastPerHours(resForecast))
             setForecastDays(getItemForecastPerDays(resForecast))
-            console.log(res)
         } catch (error) {
             console.log(error.message || "Gagal memuat data awal");
         } finally{

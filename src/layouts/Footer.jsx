@@ -10,9 +10,9 @@ export default function Footer(){
                 </div>
                 <p className="font-semibold text-slate-300/100">Your trusted weather companion</p>
                 <div className="flex space-x-3">
-                    <a href="" className="text-2xl"><FaLinkedin className="text-slate-300/100"/></a>
-                    <a href="" className="text-2xl"><FaInstagramSquare className="text-slate-300/100"/></a>
-                    <a href="" className="text-2xl"><FaGithubSquare className="text-slate-300/100"/></a>
+                    <a href="https://www.linkedin.com/in/muhammad-qurtubi-1b9117368/" className="text-2xl"><FaLinkedin className="text-slate-300/100"/></a>
+                    <a href="https://www.instagram.com/qurtubi11/" className="text-2xl"><FaInstagramSquare className="text-slate-300/100"/></a>
+                    <a href="https://github.com/Mqurtubi" className="text-2xl"><FaGithubSquare className="text-slate-300/100"/></a>
                 </div>
         </div>
     )
