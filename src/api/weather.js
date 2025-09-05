@@ -39,7 +39,7 @@ const getForecastWeather=async (kota)=>{
 }
 
 const getInfoCity= async (kota)=>{
-    const url="http://api.openweathermap.org/geo/1.0/direct"
+    const url="https://api.openweathermap.org/geo/1.0/direct"
     try{
         const res=await axios.get(url,{
         params:{
