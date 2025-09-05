@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import Footer from './layouts/Footer'
 function App() {
   return (
-    <div className='bg-linear-to-r from-cyan-500 to-blue-500 min-h-screen'>
+    <div className='bg-gradient-to-r from-cyan-500 to-blue-500 min-h-screen'>
       <NavigasiBar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
