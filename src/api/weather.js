@@ -84,4 +84,19 @@ const getDays=(item)=>{
     const day= new Date(item)
     return new Intl.DateTimeFormat("en-EN",{weekday:"short"}).format(day)
 }
-export {getWeather,getForecastWeather, getInfoCity, getItemForecastPerHours, getHours, getItemForecastPerDays, getDays}
+
+const getImage=(idWeather)=>{
+    if(idWeather >= 200 && idWeather <= 232 ) return "11d.png"
+        if(idWeather >= 300 && idWeather <= 321 ) return "09d.png"
+        if(idWeather >= 500 && idWeather <= 504 ) return "10d.png"
+        if(idWeather == 511) return "13d.png"
+        if(idWeather >= 520 && idWeather <= 531 ) return "09d.png"
+        if(idWeather >= 600 && idWeather <= 622 ) return "13d.png"
+        if(idWeather >= 701 && idWeather <= 781 ) return "50d.png"
+        if(idWeather == 800) return "01d.png"
+        if(idWeather == 801) return "02d.png"
+        if(idWeather == 802) return "03d.png"
+        if(idWeather == 803 || idWeather == 804) return "04d.png"
+        return undefined
+}
+export {getWeather,getForecastWeather, getInfoCity, getItemForecastPerHours, getHours, getItemForecastPerDays, getDays,getImage}

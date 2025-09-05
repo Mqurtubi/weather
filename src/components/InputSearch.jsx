@@ -1,5 +1,5 @@
 import { IoSearch } from "react-icons/io5";
-
+import PropTypes from "prop-types";
 export default function InputSearch({handleSubmit,handleChange,value}){
     return(
         <form className="w-11/12 mt-8 m-auto relative text-neutral-200 md:w-1/2 xl:w-1/3" onSubmit={handleSubmit}>
@@ -8,4 +8,9 @@ export default function InputSearch({handleSubmit,handleChange,value}){
             <button type="submit" className="border px-5 py-2 rounded-lg mt-3 hover:cursor-pointer hover:bg-blue-400">Search</button>
         </form>
     )
+}
+InputSearch.propTypes={
+    handleSubmit:PropTypes.func.isRequired,
+    handleChange:PropTypes.func.isRequired,
+    value:PropTypes.string.isRequired
 }

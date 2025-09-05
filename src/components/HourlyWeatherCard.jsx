@@ -1,6 +1,7 @@
 import WeatherCardSkeleton from "./WeatherCardSkeleton"
 import ItemForecast from "./ItemForecast"
 import { getHours } from "../api/weather"
+import PropTypes from "prop-types"
 export default function HourlyWeatherCard({forecast,loading}){
     return(
         <div className="m-auto w-11/12 lg:w-1/2 mb-5">
@@ -18,4 +19,8 @@ export default function HourlyWeatherCard({forecast,loading}){
             </div>
       </div>
     )
+}
+HourlyWeatherCard.propTypes={
+    forecast:PropTypes.array.isRequired,
+    loading:PropTypes.bool.isRequired
 }
