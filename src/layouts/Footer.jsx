@@ -1,0 +1,19 @@
+import { FaCloudSun,FaLinkedin, FaInstagramSquare,FaGithubSquare } from "react-icons/fa";
+
+export default function Footer(){
+
+    return(
+        <div className="flex flex-col items-center bg-blue-400 border-blue-300 border-t-1 py-5 space-y-2">
+                <div className="flex">    
+                    <FaCloudSun className="text-4xl text-yellow-300 max-sm:text-2xl"/>
+                    <span className="self-center whitespace-nowrap text-xl font-extrabold text-white ml-3 max-sm:text-lg">WeatherPro</span>
+                </div>
+                <p className="font-semibold text-slate-300/100">Your trusted weather companion</p>
+                <div className="flex space-x-3">
+                    <a href="" className="text-2xl"><FaLinkedin className="text-slate-300/100"/></a>
+                    <a href="" className="text-2xl"><FaInstagramSquare className="text-slate-300/100"/></a>
+                    <a href="" className="text-2xl"><FaGithubSquare className="text-slate-300/100"/></a>
+                </div>
+        </div>
+    )
+}

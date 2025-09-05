@@ -50,7 +50,7 @@ export default function Home(){
     }, []);
 
     return(
-        <div className="">
+        <div className="mt-8 mb-15">
             <InputSearch handleChange={onChangeHandler} handleSubmit={onSubmitHandler} value={search}/>
              {loading && (
         <WeatherCardSkeleton/>
