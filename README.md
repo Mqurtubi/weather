@@ -33,3 +33,16 @@ Aplikasi ini menampilkan informasi cuaca terkini, perkiraan per jam, serta predi
    ```bash
    git clone https://github.com/Mqurtubi/weather.git
    cd weather
+2. **Install dependencies**
+   ```bash
+   npm install
+3. **Install dependencies**
+   Buat file .env pada root project dan tambahkan key dari OpenWeather:
+   ```bash
+   VITE_API_KEY=your_api_key_here
+4. **Jalankan project**
+   ```bash
+   npm run dev
+5. **Buka di browser**
+   ```bash
+   http://localhost:5173
