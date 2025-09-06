@@ -1,8 +1,35 @@
-# React + Vite
+# 🌦️ WeatherPro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+WeatherPro adalah aplikasi cuaca real-time yang dikembangkan menggunakan **React.js** dengan integrasi **OpenWeather API**.  
+Aplikasi ini menampilkan informasi cuaca terkini, perkiraan per jam, serta prediksi 4 hari ke depan dengan tampilan yang clean dan responsif.  
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [WeatherPro on Vercel](https://weatherpro-ashen.vercel.app/)  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## ✨ Fitur Utama
+- 🔍 Cari kota dan tampilkan kondisi cuaca real-time  
+- ⏰ Perkiraan cuaca per jam  
+- 📅 Prediksi cuaca 4 hari ke depan  
+- 🌡️ Detail suhu: *Feels Like, High, Low*  
+- ☀️ Informasi Matahari & Bulan: *Sunrise, Sunset, Day Length*  
+- 📱 Desain **responsif** (desktop & mobile) dengan TailwindCSS  
+- 🚀 Hosting menggunakan **Vercel**  
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+- [React.js](https://reactjs.org/)  
+- [OpenWeather API](https://openweathermap.org/api)  
+- [Axios](https://axios-http.com/) untuk request API  
+- [TailwindCSS](https://tailwindcss.com/) untuk styling  
+- [Vercel](https://vercel.com/) untuk deployment  
+
+---
+
+## 📦 Instalasi & Menjalankan Project
+
+1. **Clone repo ini**
+   ```bash
+   git clone https://github.com/Mqurtubi/weather.git
+   cd weather
